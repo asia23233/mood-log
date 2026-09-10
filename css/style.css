@@ -34,3 +34,20 @@ footer {
   min-height: 80px;
   background-color: brown;
 }
+
+.calendar-container {
+  background-color: chartreuse;
+}
+
+#calendar-input {
+  background-color: chocolate;
+}
+
+#calendar-header {
+  background-color: coral;
+}
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: bisque;
+}
