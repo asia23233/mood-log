@@ -19,6 +19,7 @@ function createCalendar(year, month){
   for (let i = 0; i < weekdays.length; i++){
     const day = document.createElement("div");
 
+    day.classList.add("weekday");
     day.textContent = weekdays[i];
 
     calendar.appendChild(day);
@@ -36,8 +37,9 @@ function createCalendar(year, month){
   // 日数設定
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   for (let day = 1; day <= daysInMonth; day++){
-    const date = document.createElement("div");
+    const date = document.createElement("button");
 
+    date.classList.add("date");
     date.textContent = day;
 
     calendar. appendChild(date);
