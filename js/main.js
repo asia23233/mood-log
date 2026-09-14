@@ -5,7 +5,7 @@ let currentMonth = today.getMonth();
 /// カレンダー生成
 function createCalendar(year, month){
 
-  const calendar = document.getElementById("calendar");
+  const calendar = document.getElementById("calendar-days-container");
 
   // カレンダー初期化
   calendar.innerHTML ="";
@@ -14,23 +14,14 @@ function createCalendar(year, month){
   const currentMonthElement = document.getElementById("current-month");
   currentMonthElement.textContent = `${year}年${month + 1}月`;
 
-  // 曜日生成
-  const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
-  for (let i = 0; i < weekdays.length; i++){
-    const day = document.createElement("div");
-
-    day.classList.add("weekday");
-    day.textContent = weekdays[i];
-
-    calendar.appendChild(day);
-  }
-
   // 月初設定
   const firstDate = new Date(year, month, 1);
   const firstWeekday = firstDate.getDay();
   for(let i = 0; i < firstWeekday; i++){
     const empty = document.createElement("div");
 
+    empty.classList.add("days");
+    empty.classList.add("empty");
     calendar.appendChild(empty);
   }
 
@@ -39,6 +30,7 @@ function createCalendar(year, month){
   for (let day = 1; day <= daysInMonth; day++){
     const date = document.createElement("button");
 
+    date.classList.add("days");
     date.classList.add("date");
     date.textContent = day;
 
