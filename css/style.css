@@ -17,15 +17,15 @@ header {
   grid-template-columns: 20% 1fr 20%;
 }
 
-.left-sidebar {
+.left-sidebar-wrapper {
   background-color: aqua;
 }
 
-.right-sidebar {
+.right-sidebar-wrapper {
   background-color: aquamarine;
 }
 
-.main-content {
+.main-content-wrapper {
   min-height: 480px;
   background-color: blueviolet;
 }
@@ -39,14 +39,22 @@ footer {
   background-color: chartreuse;
 }
 
-#calendar-input {
+#calendar-input-container {
   background-color: chocolate;
 }
 
 #calendar-header {
   background-color: coral;
 }
-#calendar {
+
+#calendar-weekdays-container {
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: rgb(151, 112, 65);
+}
+
+#calendar-days-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   background-color: bisque;

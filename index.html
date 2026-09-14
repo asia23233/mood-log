@@ -18,28 +18,39 @@
       </header>
 
       <div class="layout-wrapper">
-        <aside class="left-sidebar">
+
+        <aside class="left-sidebar-wrapper">
           <div class="calendar-container">
-            <div id="calendar-input">
+            <div id="calendar-input-container">
               <input type="number" id="input-year" placeholder="年">
               <input type="number" id="input-month" placeholder="月">
               <button id="show-calendar">表示</button>
             </div>
-            <div id="calendar-header">
+            <div id="calendar-header-container">
               <div id="prev-month">前月</div>
               <span id="current-month"></span>
               <div id="next-month">翌月</div>
             </div>
-            <div id="calendar"></div>
+            <div id="calendar-container">
+              <div id="calendar-weekdays-container">
+                <span class="weekday sun">日</span>
+                <span class="weekday mon">月</span>
+                <span class="weekday tue">火</span>
+                <span class="weekday wed">水</span>
+                <span class="weekday thu">木</span>
+                <span class="weekday fri">金</span>
+                <span class="weekday sat">土</span>
+              </div>
+              <div id="calendar-days-container"></div>
+            </div>
           </div>
-
         </aside>
 
-        <main class="main-content">
+        <main class="main-content-wrapper">
 
         </main>
 
-        <aside class="right-sidebar">
+        <aside class="right-sidebar-wrapper">
 
         </aside>
       </div>
